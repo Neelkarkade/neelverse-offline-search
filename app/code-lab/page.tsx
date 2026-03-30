@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function AiAgentPage() {
+export default function CodeLab() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
@@ -17,7 +17,11 @@ export default function AiAgentPage() {
 
   return (
     <main className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold">AI Agent 🤖</h1>
+      <h1 className="text-4xl font-bold">Code Lab 💻</h1>
+      <p className="mt-4 text-lg text-gray-300">
+        Experiment, learn, and build with code here in NeelVerse.
+      </p>
+
       <input
         type="text"
         value={question}
@@ -33,7 +37,9 @@ export default function AiAgentPage() {
       </button>
 
       {answer && (
-        <p className="mt-4 text-lg text-green-400">{answer}</p>
+        <div className="mt-4 p-4 bg-gray-800 rounded w-96">
+          <p className="text-lg text-green-400">{answer}</p>
+        </div>
       )}
     </main>
   );
